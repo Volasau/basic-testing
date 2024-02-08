@@ -58,13 +58,13 @@ describe('BankAccount', () => {
     const balance = await myAccount.fetchBalance();
 
     // This part of the code can be used to check both null and number
-    // if (balance === null) {
-    //   expect(balance).toBeNull();
-    // } else {
-    //   expect(typeof balance).toBe('number');
-    // }
+    if (balance === null) {
+      expect(balance).toBeNull();
+    } else {
+      expect(typeof balance).toBe('number');
+    }
 
-    expect(typeof balance).toBe('number');
+    // expect(typeof balance).toBe('number');
   });
 
   test('should set new balance if fetchBalance returned number', async () => {
